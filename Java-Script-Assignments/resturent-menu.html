@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const restaurant = {
+  name: "Andhra Restaurant",
+  location: "Bus Stand , Tirupati Road",
+  menu: ["Pizza", "Burger", "Salad"],
+
+  // Method to add an item to the menu
+  addItemToMenu: function(item) {
+    this.menu.push(item);
+    console.log(`${item} has been added to the menu.`);
+  },
+
+  // Method to remove an item from the menu
+  removeItemFromMenu: function(item) {
+    let index = this.menu.indexOf(item);
+    if (index !== -1) {
+      this.menu.splice(index, 1);
+      console.log(`${item} has been removed from the menu.`);
+    } else {
+      console.log(`${item} is not on the menu.`);
+    }
+  }
+};
+
+// Initial menu
+console.log("Initial Menu:", restaurant.menu);
+
+// Adding an item to the menu
+restaurant.addItemToMenu("birayani");
+
+// Updated menu after adding an item
+console.log("Updated Menu:", restaurant.menu);
+
+// Removing an item from the menu
+//restaurant.removeItemFromMenu("Burger");
+
+// Updated menu after removing an item
+//console.log("Updated Menu:", restaurant.menu);
+
+    </script>
+</body>
+</html>
