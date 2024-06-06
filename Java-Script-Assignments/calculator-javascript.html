@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+ const firstValue = prompt("What is ur first Value ?");
+ const SecondValue = prompt("What is ur Second Value ?");
+ const operator = prompt("What is ur Arthmatic operator ?");
+
+ if(operator==='+'){
+   const add = parseInt(firstValue)+parseInt(SecondValue);
+   console.log(add)
+ }
+ else if(operator==='-'){
+  const sub = parseInt(firstValue)-parseInt(SecondValue);
+   console.log(sub);
+ }
+ else if(operator==='*'){
+  const sub = parseInt(firstValue)-parseInt(SecondValue);
+   console.log(sub);
+ }
+ else if(operator==='/'){
+  if((firstValue===0)&&(SecondValue===0)){
+    const div = parseInt(firstValue)/parseInt(SecondValue);
+   console.log(div);
+  }
+   console.log("0 is not divison by any number");
+ }
+
+  </script>  
+</body>
+</html>
