@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: azure;
+
+    }
+    .main {
+    background-color: #898888;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(208, 6, 6, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+h2{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: aliceblue;
+}
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    .form-group label{
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .form-group input, 
+.form-group textarea, 
+.form-group button {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+.r1{
+    position: relative;
+    top: 15px;
+    margin-right: 200px;;
+}
+.c1{
+    position: relative;
+    top: 20px;
+}
+.t1{
+    position: relative;
+    top: 20px;
+    margin-left: 50px;
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+button{
+    background-color: aqua;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 10px;
+}
+button:hover{
+    background-color: blue;
+
+}
+@media(max-width:500px){
+    .form-group{
+        flex-direction: row;
+        align-items: center;
+    }
+    .form-group label {
+        width: 30%;
+        margin-bottom: 0;
+        padding-right: 10px;
+        text-align: right;
+    }
+    .r1{
+        position: relative;
+        top: 0px;
+    }
+
+    .c1{
+        position: relative;
+        top: 0px;
+        margin-right: 100px;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        width: 50%;
+    }
+}
+</style>
+<body>
+    <div class="main">
+    <h2> Advanced Registration Form</h2>
+    <form>
+        <div class="form-group">
+            <label class="firstlabel">First Name</label>
+            <input class="firstname" type="text" name="first_name" placeholder="First Name">
+            <label class="lastlabel">Last Name</label>  
+            <input class="lastname" type="text" name="last_name" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <label for="username" class="userlabel">Username</label>
+            <input type="text"placeholder="username"id="username" minlength="4" maxlength="7" required class="username">
+        </div>
+        <div class="form-group">
+            <label for="email" class="emaillabel">Email</label>
+            <input type="email"placeholder="Enter ur mail"id="email" class="email" class="email">
+        </div>
+        <div class="form-group">
+            <label for="pswd">Password</label>
+            <input type="text"placeholder="Password"id="pswd" pattern="alpha numeric">
+        </div>
+        <div class="form-group">
+            <label for="cpswd">Confirm Password</label>
+            <input type="text"placeholder="Confirm Password"id="cpswd">
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="datetime-local"placeholder="date of birth"id="dob">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <input type="radio" id="gender" class="r1">
+            <label for="gender">Male</label>
+            <input type="radio" id="gender"  class="r1">
+            <label for="gender">Female</label>
+            <input type="radio" id="gender"  class="r1">
+            <label for="gender">Others</label>
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select class="option" name="counrty">
+                <option disabled="disabled" selected="selected">----choice counrty----</option>
+                <option>India</option>
+                <option>China</option>
+                <option>USA</option>
+            </select>
+        </div>
+    <div class="form-group">
+        <label for="int">Interests</label>
+        <input type="checkbox" id="int"  class="c1">Dance
+        <input type="checkbox" id="int"  class="c1">Singing
+        <input type="checkbox" id="int"  class="c1">Learning
+    </div>
+     <div class="form-group">
+        <label for="pic">Profile Picture </label>
+        <input type="file" id="pic">
+     </div>
+     <div class="form-group">
+        <label for="area">Shrort Bio</label>
+        <textarea id="area"cols="10"rows="10"></textarea>
+     </div>
+  <div class="form-group">
+    <input type="checkbox"  class="t1">
+    <label for="tc">Terms and Conditions</label>
+  </div>
+
+  <button value="submit">Submit</button>
+  <button value="reset">Reset</button>
+    </form>
+</div>
+</body>
+</html>
